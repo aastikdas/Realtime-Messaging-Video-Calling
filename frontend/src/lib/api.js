@@ -19,7 +19,9 @@ export const completeOnboarding = async (userData)=>{
     }
 export const getAuthUser = async()=>{
     try {
-      const res = await axiosInstance.get("/auth/me")
+     const res = await axiosInstance.get("/auth/me", {
+      withCredentials: true  
+    });
       return res.data;
     } catch (error) {
       console.log("Error in getAuthUser ", error)
