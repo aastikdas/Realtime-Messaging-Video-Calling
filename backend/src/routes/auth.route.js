@@ -3,6 +3,7 @@ import { login, logout, signUp, onboard } from "../controllers/auth.controller.j
 import { protectRoute } from "../middlewares/auth.middleware.js";
 const router= express.Router()
 
+
 router.post("/signup", signUp)
 router.post("/logout", logout)
 router.post("/login", login)

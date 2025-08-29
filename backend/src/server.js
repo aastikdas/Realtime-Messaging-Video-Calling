@@ -28,6 +28,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
+
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
